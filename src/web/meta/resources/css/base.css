@@ -7,6 +7,12 @@ body {
   padding-top: 4em;
   background-color: #fafafa;
   color: #333333;
+  background-image: url('https://4kwallpapers.com/images/walls/thumbs_3t/5630.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 body.rtl {
@@ -48,6 +54,8 @@ video {
   width: 95%;
   max-width: 960px;
   margin: 1em auto 0;
+
+
 }
 
 i.spin {

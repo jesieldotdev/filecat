@@ -25,12 +25,12 @@ html[dir="rtl"] #listing {
 }
 
 #listing .item {
-  background: var(--surfacePrimary);
+
   border-color: var(--divider);
   position: relative;
   display: flex;
   flex-wrap: nowrap;
-  color: var(--textPrimary);
+
   transition:
           0.1s ease background,
           0.1s ease opacity;

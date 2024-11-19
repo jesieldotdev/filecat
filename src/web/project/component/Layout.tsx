@@ -54,7 +54,7 @@ function Layout() {
 
 
     return (
-        <div>
+        <div >
             {/*全局显示*/}
             <Suspense fallback={<div></div>}>
                 <Prompt></Prompt>
