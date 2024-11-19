@@ -1,4 +1,5 @@
 // src/context/GlobalState.js
+import 'tailwindcss/tailwind.css'
 import React, { createContext, useState } from 'react';
 import {UserBaseInfo} from "../../common/req/user.req";
 import {useRecoilState} from "recoil";
@@ -6,6 +7,8 @@ import {$stroe} from "./util/store";
 import {fileHttp, settingHttp} from "./util/config";
 import {RCode} from "../../common/Result.pojo";
 import {useTranslation} from "react-i18next";
+
+
 
 export const GlobalContext = createContext(undefined);
 

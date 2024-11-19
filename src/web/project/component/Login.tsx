@@ -33,7 +33,7 @@ function Login() {
             new Noty({
                 type: 'error',
                 text: '密码错误',
-                timeout: 1000, // 设置通知消失的时间（单位：毫秒）
+                timeout: 1000, 
                 layout:"bottomLeft"
             }).show();
         }
@@ -42,6 +42,7 @@ function Login() {
     return (
         <WinCenter>
             <h1>FileCat</h1>
+      
             <div>
                 <InputText placeholder={t("账号")} handleInputChange={(value) => {
                     setUsername(value)

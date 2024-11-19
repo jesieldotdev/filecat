@@ -80,7 +80,9 @@ export function FileItem(props: FileItemData & { index?: number, itemWidth?: str
     };
 
 
-    return <BaseFileItem extraAttr={{
+    return <BaseFileItem 
+
+    extraAttr={{
         onContextMenu: (event) => {
             handleContextMenu(event, props.name, props.type === FileTypeEnum.folder)
         }

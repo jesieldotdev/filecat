@@ -7,7 +7,7 @@ module.exports = {
     mode: 'production',
     entry: path.join(__dirname, "..", "..", "src", "web", "project", 'index.js'),
     output: {
-        // path: path.resolve(__dirname, '..','..','dist'),
+        
         filename: 'bundle.js',
         path: path.resolve(__dirname, '..', "..", 'build', 'dist'),
     },
@@ -19,13 +19,17 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        configFile: path.resolve(__dirname, '.babelrc'), // 指定 .babelrc 文件路径
+                        configFile: path.resolve(__dirname, '.babelrc'),
                     },
                 },
             },
             {
-                test: /\.css$/, // 匹配所有以.css结尾的文件
-                use: ['style-loader', 'css-loader'] // 使用style-loader和css-loader处理匹配到的文件
+                test: /\.css$/, 
+                use: [
+                    'style-loader', 
+                    'css-loader',   
+                    'postcss-loader' 
+                ]
             },
             {
                 test: /\.svg/,
@@ -33,6 +37,7 @@ module.exports = {
             }
         ],
     },
+    
     resolve: {
         extensions: ['.tsx', '.ts', '.js', '.jsx'],
     },
@@ -46,7 +51,7 @@ module.exports = {
         new webpack.DefinePlugin({
             'process.env.version': JSON.stringify(package_data.version),
         })
-        // new BundleAnalyzerPlugin()
+        
     ],
     devServer: {
         static: [
@@ -59,13 +64,13 @@ module.exports = {
         ],
         port: 3301,
         open: false,
-        // onListening: function (devServer) {
-        //     if (!devServer) {
-        //         throw new Error('webpack-dev-server is not defined');
-        //     }
-        //     // const port = devServer.server.address().port;
-        //     console.log('Listening on port:', port);
-        // },
-        allowedHosts: "all", //  新增该配置项
+        
+        
+        
+        
+        
+        
+        
+        allowedHosts: "all", 
     },
 };
